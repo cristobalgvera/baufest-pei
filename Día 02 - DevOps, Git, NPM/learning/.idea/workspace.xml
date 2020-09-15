@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="02afbd8f-bf93-416d-9677-881329e15502" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/learning.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodejs/classes/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodejs/classes/dog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodejs/classes/persona.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodejs/destructure/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodejs/destructure/utility.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodejs/file-system/appendFile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodejs/file-system/assets/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodejs/file-system/assets/backgroun_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodejs/file-system/assets/colors.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodejs/file-system/assets/os_pop.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodejs/file-system/assets/os_win.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodejs/file-system/assets/text.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodejs/file-system/created-dir/color.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodejs/file-system/mkdir.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodejs/file-system/readDirectory.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodejs/file-system/readFile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nodejs/file-system/writeFile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="package.json" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1hXuKURx5rkdrxSNjYNIZy9J3Sl" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.18.3" />
+    <property name="javascript.nodejs.core.library.typings.version" value="12.12.58" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path" value="$USER_HOME$/.nvm/versions/node/v12.18.3/bin/node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/js/classes" />
+      <recent name="$PROJECT_DIR$/js/destructure" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="02afbd8f-bf93-416d-9677-881329e15502" name="Default Changelist" comment="" />
+      <created>1600169697988</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600169697988</updated>
+      <workItem from="1600169700261" duration="360000" />
+      <workItem from="1600170088215" duration="5770000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="778" y="228" width="354" height="657" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1600171346733">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="778" y="228" width="354" height="657" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1600171346733" />
+    <state x="464" y="188" width="992" height="737" key="SettingsEditor" timestamp="1600170071245">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="464" y="188" width="992" height="737" key="SettingsEditor/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1600170071245" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1600170940185">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1600170940185" />
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1600171319475">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053/1920.0.1920.1080@0.27.1920.1053" timestamp="1600171319475" />
+  </component>
+</project>

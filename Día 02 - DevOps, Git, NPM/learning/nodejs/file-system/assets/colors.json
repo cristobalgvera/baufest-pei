@@ -1,0 +1,16 @@
+{
+  "colorList": [
+    {
+      "name": "Black",
+      "hex": "#181717"
+    },
+    {
+      "name": "Blue",
+      "hex": "#007bff"
+    },
+    {
+      "name": "Red",
+      "hex": "#dc3545"
+    }
+  ]
+}
