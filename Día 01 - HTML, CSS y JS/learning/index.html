@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/dist/master.css">
+
+    <!-- You should avoid below code -->
+    <style>
+        #generic-table {
+            border: 1px solid black;
+        }
+    </style>
+    <title>Index</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>This is the header</h1>
+        </div>
+    </header>
+    <main>
+        <p>
+            This is a paragraph inside of a main tag
+        </p>
+
+        <!-- Generic use of a, img and figcaption tags -->
+        <a href="https://blog.desdelinux.net/wp-content/uploads/2019/11/tux-linux.jpg">
+            <img id="linux-img" src="https://blog.desdelinux.net/wp-content/uploads/2019/11/tux-linux.jpg"
+                alt="Linux logo" width="20%">
+            <figcaption>Linux logo. You can press it and go to image url</figcaption>
+        </a>
+
+        <!-- Generic use of table tag. It's obsolete (?) -->
+        <table id="generic-table" class="useful-table">
+            <thead>
+                <tr>
+                    <th>Head 1</th>
+                    <th>Head 2</th>
+                </tr>
+            </thead>
+            <tbody id="generic-tbody">
+                <tr>
+                    <td>Body 1.1</td>
+                    <td>Body 1.2</td>
+                </tr>
+                <tr>
+                    <td>Body 2.1</td>
+                    <td>Body 2.2</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>Footer 1</th>
+                    <th>Footer 2</th>
+                </tr>
+            </tfoot>
+        </table>
+
+        <!-- Generic use of buttons with JS -->
+        <button id="color-button">Press me!</button>
+
+        <br />
+
+        <!-- Generic use of select and option tags -->
+        <label for="generic-select">What number represent you most?</label>
+        <select id="generic-select">
+            <option value="disabled" selected disabled>Select one</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+
+        <!-- Generic use of form tag -->
+        <form action="#" method="get">
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+            <label for="datetime-form">Date:</label>
+            <input type="datetime" id="datetime-form">
+            <br />
+            <button type="submit">Send</button>
+            <button type="reset">Reset</button>
+            <button disabled="disabled">You can't press this button</button>
+        </form>
+
+        <!-- Example of function declared on master.js, this case, function name is 'niceAlert' -->
+        <div class="generic-div" onclick="niceAlert()">
+            <h3>Hey you, you are in a h3 tag</h3>
+        </div>
+
+    </main>
+
+    <footer>
+        <div>
+            <h2>This is the footer</h2>
+        </div>
+    </footer>
+
+    <!-- Basic use of scripts -->
+    <script>
+        document.getElementById("linux-img").onclick = () => alert("Hey you, this is the Linux image!");
+    </script>
+
+    <!--
+        If you are using DOM elements inside of an external JS file (this case), you must put script tag
+        in bottom of body tag, this way, when JS file "compile", it can look up for specific DOM elements.
+    -->
+    <script src="js/master.js"></script>
+</body>
+
+</html>

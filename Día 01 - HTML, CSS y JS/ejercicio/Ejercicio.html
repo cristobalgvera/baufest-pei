@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Introducci&oacute;n a HTML, CSS y Javascript</title>
+    <!-- comentario -->
+
+    <!-- Referencia a los estilos CSS -->
+    <link href="css/ejercicio.css" rel="stylesheet" type="text/css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+        rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header>
+        Introducci&oacute;n a HTML, CSS y Javascript
+    </header>
+    <article>
+        <header>
+            Este es el t&iacute;tulo del art&iacute;culo
+        </header>
+        <p>Este es el sector de la pantalla donde va el texto del art&iacute;culo, nota o post.</p>
+        <p>El texto ser&aacute; extenso y separado en p&aacute;rrafos. Al pie del art&iacute;culo se podr&aacute;n
+            cargar comentarios por los usuarios
+            "registrados". Estos comentarios se mostrar&aacute;n en orden de carga bajo el art&iacute;culo.
+        </p>
+        <p>
+            La secci&oacute;n de comentarios debe cumplir con las siguientes caracter&iacute;sticas:
+        <ul>
+            <li>Un comentario deber&aacute; contener el Usuario que lo carg&oacute;, un texto de hasta 200 caracteres y
+                una marca que
+                indique si el comentario se debe destacar.
+            </li>
+            <li>El usuario deber&aacute; elegirse desde una lista desplegable.</li>
+            <li>Si un comentario se marc&oacute; como "Destacar", en la lista de comentarios se mostrar&aacute; con un
+                estilo
+                diferente al resto de los comentarios. El estilo es a elecci&oacute;n de los desarrolladores.
+            </li>
+            <li>C&oacute;mo m&aacute;ximo se podr&aacute; cargar 10 comentarios por art&iacute;culo, la "base de datos"
+                del sitio no tiene capacidad
+                para almacenar m&aacute;s.</li>
+            <li>Un usuario puede cargar m&aacute;s de un comentario, pero no m&aacute;s de 3, para que no monopolizar
+                las opiniones.</li>
+            <li>Un usuario solo puede tener 1 comentario como destacado.</li>
+            <li>Los mensajes de error se mostrar&aacute;n debajo de los controles de carga del comentario en color rojo,
+                a
+                excepci&oacute;n del m&aacute;ximo de comentarios total, que se mostrar&aacute; como una popup de
+                alerta.
+            </li>
+            <li>El usuario debe observar el logo de comentarios.</li>
+        </ul>
+        </p>
+    </article>
+    <aside>
+        <header>Coment&aacute;</header>
+
+        <!-- Commit form -->
+        <form id="commit-form" action="#commit-form">
+            <div>
+                <select id="users-list" required>
+                    <option value="disable" selected disabled>Selecciona un usuario</option>
+                </select>
+                <label for="highlight">Destacar</label>
+                <input type="checkbox" id="highlight">
+            </div>
+            <textarea id="commit" rows="10" cols="50" maxlength="200" placeholder="Escribe tu comentario aquí" required></textarea>
+            <button type="submit" id="submit-button">Comentar</button>
+        </form>
+
+        <!-- Error messages -->
+        <span id="errorUsuarioCantidad" class="error">El usuario ya ingres&oacute; el m&aacute;ximo de comentarios
+            (3).</span>
+        <span id="errorUsuarioCantidadDestacado" class="error">El usuario ya tiene un comentario destacado.</span>
+        <span id="errorUsuarioRequerido" class="error">Debe indicar un usuario</span>
+        <span id="errorTextoRequerido" class="error">Debe indicar un texto</span>
+        <!-- <span id="errorComentariosCantidad" class="error">Se alcanzó el número máximo de comentarios (10)</span> -->
+        <span id="errorTextoCaracteres" class="error">El texto del comentario no puede tener m&aacute;s de 200
+            caracteres</span>
+
+        <!-- Commits list -->
+        <h2><label id="cantidadComentarios">0</label> comentarios</h2>
+        <div id="comentarios">
+            <div id="comentarioBase" class="comentario">
+                <label class="usuario">Usuario</label><label> dijo...</label>
+                <div class="textoComentario">Ac&aacute; va el comentario</div>
+            </div>
+        </div>
+        <!-- Agregar referencia a logo de comentarios -->
+        <img src="image/comment.png" alt="Commit logo" width="20%">
+    </aside>
+    <script src="Scripts/ejercicio.js"></script>
+</body>
+
+</html>

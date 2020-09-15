@@ -1,0 +1,27 @@
+#linux-img {
+  margin: 20px;
+  border: 2px solid gray;
+  border-radius: 50px;
+}
+
+div {
+  border: 1px solid pink;
+}
+
+.useful-table {
+  background-color: violet;
+}
+.useful-table #generic-tbody {
+  font-style: normal;
+}
+.useful-table tbody {
+  font-style: italic;
+  background-color: green;
+}
+.useful-table tbody {
+  background-color: blue;
+}
+
+.generic-div > h3 {
+  background-color: yellow;
+}

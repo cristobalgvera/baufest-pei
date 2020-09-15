@@ -1,0 +1,33 @@
+#linux-img {
+    margin: 20px;
+    border: 2px solid gray;
+    border-radius: 50px;
+}
+
+div {
+    border: 1px solid pink;
+}
+
+.useful-table {
+    background-color: violet;
+
+    // Id tag has priority to inyect styles, that means below font-style doesn't apply this case
+    #generic-tbody {
+        font-style: normal;
+    }
+
+    // This is most general than below 'tbody' tag, that means below one can overwrite his properties
+    tbody {
+        font-style: italic;
+        background-color: green;
+    }
+
+    // This overwrite above 'background-color'. That's becouse there are both 'tbody' tag
+    tbody {
+        background-color: blue;
+    }
+}
+
+.generic-div > h3 {
+    background-color: yellow;
+}

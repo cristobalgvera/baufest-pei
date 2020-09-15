@@ -1,0 +1,126 @@
+/* Selector de Hijos */
+body > header {
+  font-weight: normal;
+  margin: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  color: #fff;
+  background-color: rgb(242,13,80);
+  text-shadow: 1px 1px White;
+  font-size: 28pt;
+  width: 99%;
+  font-family: Calibri;
+}
+
+/* Selector por Tipo de Elemento
+   Agrupados */
+article, aside {
+    width: 60%;
+    margin: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(204, 204, 204);
+    border-radius: 10px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    color: #404040;
+}
+
+/* Selector de Hijos */
+aside > header {
+}
+
+/* Selector por Tipo de Elemento */
+aside {
+    padding-left: 5px;
+}
+
+/* Selector por Tipo de Elemento */
+article > header {
+}
+
+/* Selector por Tipo de Elemento */
+p {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* Selector por Tipo de Elemento
+   Agrupados */
+select, button {
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+}
+
+/* Selector por Tipo de Elemento */
+button {
+    padding: 12px;
+    top: -18px;
+    position: relative;
+}
+
+/* Selector por Tipo de Elemento */
+select {
+    padding: 4px;
+}
+
+/* Selector por Tipo de Elemento */
+textarea {
+    margin-top: 5px;
+}
+
+/* Selector por Clase */
+.esquina-redondeada, .textoComentario {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+/* Select de Hermanos inmediatamente adyacentes */
+#destacar + label {
+    display: inline-block;
+    width: 60%;
+}
+
+/* Selector por Clase */
+.destacado {
+    background-color: yellow;
+}
+
+/* Selector por Clase */
+.textoComentario {
+    white-space: pre;
+    font-size: 18px;
+    border-color: rgb(204, 204, 204);
+    border-style: solid;
+    border-width: 1px;
+    padding: 4px;
+}
+
+/* Selector por Clase */
+.error {
+    font-size: 14px;
+    display: block;
+    color: red;
+}
+
+.comentario {
+    width: 70%;
+    margin: auto;
+}
+.comentario > label {
+}
+.comentario > label.usuario {
+}
+
+#comentarios {
+    padding-bottom: 10px;
+}
+
+#commit-form {
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+}
