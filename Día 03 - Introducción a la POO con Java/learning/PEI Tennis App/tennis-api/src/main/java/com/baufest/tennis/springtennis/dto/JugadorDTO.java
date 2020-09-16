@@ -7,9 +7,7 @@ import javax.persistence.*;
 public class JugadorDTO {
 
 	private Long id;
-
 	private String nombre;
-
 	private int puntos;
 
 	public JugadorDTO(String nombre, int puntos) {
@@ -57,4 +55,12 @@ public class JugadorDTO {
 		return jo;
 	}
 
+	@Override
+	public String toString() {
+		return "JugadorDTO{" +
+				"id=" + id +
+				", nombre='" + nombre + '\'' +
+				", puntos=" + puntos +
+				'}';
+	}
 }

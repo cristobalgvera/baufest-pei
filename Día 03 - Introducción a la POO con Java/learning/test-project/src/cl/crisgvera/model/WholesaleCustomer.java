@@ -21,6 +21,10 @@ public class WholesaleCustomer extends Customer {
         return true;
     }
 
+    public boolean canBuyProduct() {
+        return true;
+    }
+
     @Override
     public String toString() {
         return "wholesaleCustomer{" +
