@@ -51,9 +51,6 @@ public class Customer extends Persona {
 
     public void addShoppingCart(ShoppingCart shoppingCart) {
         int cost = shoppingCart.getTotal();
-        if (shoppingCart.isPromotionEnabled())
-            cost = shoppingCart.getTotalWithPromotion();
-
         shoppingCarts.put(shoppingCart, cost);
         totalMoney -= cost;
     }

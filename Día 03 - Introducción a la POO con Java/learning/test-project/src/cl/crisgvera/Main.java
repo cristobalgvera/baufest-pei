@@ -22,7 +22,7 @@ public class Main {
     private static void exerciseThreeAndSectionC() {
         Store store = new Store("Tiendita de prueba");
         List<Product> products = setProductsList(30);
-        List<Customer> customers = setCustomerList(20);
+        List<Customer> customers = setCustomerList(10);
 
         customers.forEach(customer -> System.out.println(customer.getName() + " tiene: " + customer.getTotalMoney()));
 
@@ -51,8 +51,9 @@ public class Main {
         System.out.println(store.getMostActiveCustomer());
 
         // C2
-        System.out.println("\nCarritos más caros:");
-        System.out.println(store.getMostExpensivesShoppingCarts(20000));
+        int amount = 5000;
+        System.out.println("\nCarritos más caros que " + amount + ":");
+        System.out.println(store.getMostExpensivesShoppingCarts(amount));
 
         // C3
         System.out.println("\nTodos los clientes compraron: " + store.allCustomerBought());

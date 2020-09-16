@@ -3,7 +3,6 @@ package cl.crisgvera.model;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 public class Store {
@@ -20,44 +19,26 @@ public class Store {
     }
 
     public Customer getMostActiveCustomer() {
-        Customer mostActiveCustomer = new Customer();
-
-        for (Customer customer : customers) {
-            if (customer.getTotalPurchases() > mostActiveCustomer.getTotalPurchases())
-                mostActiveCustomer = customer;
-        }
-
-        return mostActiveCustomer;
+        return customers.stream()
+                .max(Comparator.comparingInt(Customer::getTotalPurchases))
+                .orElse(null);
     }
 
     public List<ShoppingCart> getMostExpensivesShoppingCarts(int amount) {
-        List<ShoppingCart> mostExpensivesShoppingCarts = new ArrayList<>();
-        shoppingCarts.forEach(shoppingCart -> {
-            if (shoppingCart.getTotal() > amount)
-                mostExpensivesShoppingCarts.add(shoppingCart);
-        });
-
-        return mostExpensivesShoppingCarts;
+        return shoppingCarts.stream()
+                .filter(shoppingCart -> shoppingCart.getTotal() > amount)
+                .collect(Collectors.toList());
     }
 
     public boolean allCustomerBought() {
-        for (Customer customer : customers)
-            if (customer.getShoppingCarts().isEmpty()) return false;
-
-        return true;
+        return customers.stream()
+                .allMatch(customer -> !getShoppingCarts().isEmpty());
     }
 
     public List<Customer> whoDoNotBoughtTwice() {
-        List<Customer> customerWhoDoNotBoughtTwice = new ArrayList<>();
-        for (Customer customer : customers) {
-            AtomicInteger i = new AtomicInteger();
-            customer.getShoppingCarts().forEach((k, v) -> {
-                i.addAndGet(1);
-            });
-            if (i.get() < 2) customerWhoDoNotBoughtTwice.add(customer);
-        }
-
-        return customerWhoDoNotBoughtTwice;
+        return customers.stream()
+                .filter(customer -> customer.getShoppingCarts().size() == 1)
+                .collect(Collectors.toList());
     }
 
     public int getTotalSales() {

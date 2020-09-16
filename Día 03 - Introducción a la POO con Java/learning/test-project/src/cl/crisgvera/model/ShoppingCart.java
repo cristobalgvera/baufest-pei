@@ -17,11 +17,12 @@ public class ShoppingCart {
 
     public int getTotal() {
         AtomicInteger totalCost = new AtomicInteger();
-        products.forEach((product, quantity) -> totalCost.addAndGet(product.getCost() * quantity));
+        if (promotionEnabled) return getTotalWithPromotion();
+        else products.forEach((product, quantity) -> totalCost.addAndGet(product.getCost() * quantity));
         return totalCost.get();
     }
 
-    public int getTotalWithPromotion() {
+    private int getTotalWithPromotion() {
         AtomicInteger totalCost = new AtomicInteger();
         products.forEach((product, quantity) -> {
             int totalByProduct = product.getCost() * quantity;
