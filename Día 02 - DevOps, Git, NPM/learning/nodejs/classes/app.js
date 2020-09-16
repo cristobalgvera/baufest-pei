@@ -10,3 +10,4 @@ personaObj.walk(); // Use methods
 let doggy = require("./dog"); // doggy instance represents Dog class instance
 console.log("\nDog:");
 doggy.bark(); // Simply use methods, instantiation is "already done"
+doggy.eat(); // Another method defined inside of Dog class
