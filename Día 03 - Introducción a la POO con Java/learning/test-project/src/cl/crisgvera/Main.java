@@ -21,8 +21,10 @@ public class Main {
 
     private static void exerciseThreeAndSectionC() {
         Store store = new Store("Tiendita de prueba");
-        List<Product> products = setProductsList(10);
-        List<Customer> customers = setCustomerList(5);
+        List<Product> products = setProductsList(30);
+        List<Customer> customers = setCustomerList(20);
+
+        customers.forEach(customer -> System.out.println(customer.getName() + " tiene: " + customer.getTotalMoney()));
 
         System.out.println("\nClientes que no pudieron comprar por falta de dinero:");
         customers.forEach(customer -> {
@@ -75,7 +77,7 @@ public class Main {
         WholesaleCustomer wholesaleCustomer = new WholesaleCustomer("Boro", "Broadway 1, 14th Floor, Cambridge, Boston", "tomas@boro.com", -1);
         Product product = new Product("Botines", "Nike", 2000);
 
-        System.out.println(wholesaleCustomer.canBuyProduct(product));
+        System.out.println("Cliente mayorista " + wholesaleCustomer + " puede comprar: " + wholesaleCustomer.canBuyProduct(product));
     }
 
     private static void exerciseOne() {
@@ -85,9 +87,10 @@ public class Main {
         stringBuilder.setLength(0);
         stringBuilder.append(customer.getName());
 
-        if (!customer.canBuyProduct(product)) stringBuilder.append(" NO");
-        stringBuilder.append(" puede comprar " + product.getName() + " " + product.getDescription());
+        if (!customer.canBuyProduct(product))
+            stringBuilder.append(" NO");
 
+        stringBuilder.append(" puede comprar " + product.getName() + " " + product.getDescription());
         System.out.println(stringBuilder);
     }
 
