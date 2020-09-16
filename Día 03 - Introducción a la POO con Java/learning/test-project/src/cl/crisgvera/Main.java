@@ -53,15 +53,15 @@ public class Main {
         // C2
         int amount = 5000;
         System.out.println("\nCarritos más caros que " + amount + ":");
-        System.out.println(store.getMostExpensivesShoppingCarts(amount));
+        System.out.println(store.getExpensiveShoppingCarts(amount));
 
         // C3
-        System.out.println("\nTodos los clientes compraron: " + store.allCustomerBought());
+        System.out.println("\nTodos los clientes compraron: " + store.verifyAllCustomersBought());
 
         // C4
         System.out.println("\nClientes que no compraron más de una vez:");
-        System.out.println(store.whoDoNotBoughtTwice());
-        System.out.println("Número de clientes: " + store.whoDoNotBoughtTwice().stream().count());
+        System.out.println(store.getCustomersWhoDoNotBoughtMoreThanOnce());
+        System.out.println("Número de clientes: " + store.getCustomersWhoDoNotBoughtMoreThanOnce().stream().count());
 
         // C5
         System.out.println("\nTotal ganado por la tienda hasta el momento:");
@@ -69,7 +69,7 @@ public class Main {
 
         // C6
         System.out.println("\nClientes ordenados desde el que más compró");
-        System.out.println(store.orderCustomersByTotalBought());
+        System.out.println(store.getCustomersOrderedByTotalBought());
         store.getCustomers().forEach(customer -> System.out.println(customer.getName() + " compró: " + customer.getTotalPurchases()));
 
     }

@@ -24,18 +24,18 @@ public class Store {
                 .orElse(null);
     }
 
-    public List<ShoppingCart> getMostExpensivesShoppingCarts(int amount) {
+    public List<ShoppingCart> getExpensiveShoppingCarts(int amount) {
         return shoppingCarts.stream()
                 .filter(shoppingCart -> shoppingCart.getTotal() > amount)
                 .collect(Collectors.toList());
     }
 
-    public boolean allCustomerBought() {
+    public boolean verifyAllCustomersBought() {
         return customers.stream()
                 .allMatch(customer -> !getShoppingCarts().isEmpty());
     }
 
-    public List<Customer> whoDoNotBoughtTwice() {
+    public List<Customer> getCustomersWhoDoNotBoughtMoreThanOnce() {
         return customers.stream()
                 .filter(customer -> customer.getShoppingCarts().size() == 1)
                 .collect(Collectors.toList());
@@ -45,7 +45,7 @@ public class Store {
         return shoppingCarts.stream().mapToInt(ShoppingCart::getTotal).sum();
     }
 
-    public List<Customer> orderCustomersByTotalBought() {
+    public List<Customer> getCustomersOrderedByTotalBought() {
         return customers.stream()
                 .sorted(Comparator.comparingInt(Customer::getTotalPurchases).reversed())
                 .collect(Collectors.toList());
