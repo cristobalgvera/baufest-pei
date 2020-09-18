@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02afbd8f-bf93-416d-9677-881329e15502" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/learning.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodejs/classes/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodejs/classes/dog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodejs/classes/persona.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodejs/destructure/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodejs/destructure/utility.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodejs/file-system/appendFile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodejs/file-system/assets/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodejs/file-system/assets/backgroun_black.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodejs/file-system/assets/colors.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodejs/file-system/assets/os_pop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodejs/file-system/assets/os_win.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodejs/file-system/assets/text.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodejs/file-system/created-dir/color.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodejs/file-system/mkdir.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodejs/file-system/readDirectory.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodejs/file-system/readFile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nodejs/file-system/writeFile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Día 04 - Acceso a datos y ORMs/documentos/.~lock.Dia 04 ORM-SQL final.pptx#" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +63,7 @@
       <updated>1600169697988</updated>
       <workItem from="1600169700261" duration="360000" />
       <workItem from="1600170088215" duration="5770000" />
+      <workItem from="1600435547691" duration="19000" />
     </task>
     <servers />
   </component>
