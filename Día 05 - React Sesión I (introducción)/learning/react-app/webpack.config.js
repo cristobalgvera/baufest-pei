@@ -5,7 +5,11 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
+        publicPath: "http://localhost:8080",
         filename: "bundle.js"
+    },
+    devServer: {
+        historyApiFallback: true
     },
     resolve: {
         extensions: ['.js', '.jsx']
@@ -18,6 +22,10 @@ module.exports = {
                 use: {
                     loader: "babel-loader"
                 }
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
             },
             {
                 test: /\.html$/,
