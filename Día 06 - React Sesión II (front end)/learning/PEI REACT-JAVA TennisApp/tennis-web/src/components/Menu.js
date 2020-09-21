@@ -13,6 +13,7 @@ function Menu()  {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
                         <Nav.Link as={Link} to="/jugadores">Jugadores</Nav.Link>
+                        <Nav.Link as={Link} to={"/partidos"}>Partidos</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </div>
