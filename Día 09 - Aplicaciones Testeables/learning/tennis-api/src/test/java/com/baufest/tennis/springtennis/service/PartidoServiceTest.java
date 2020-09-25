@@ -11,7 +11,6 @@ import com.baufest.tennis.springtennis.repository.PartidoRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.jupiter.api.function.Executable;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -19,6 +18,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static com.baufest.tennis.springtennis.service.PartidoServiceImpl.*;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
@@ -83,7 +83,7 @@ class PartidoServiceTest {
         for (int i = 0; i < 2; i++) {
             testPartidos.add(new Partido());
             testPartidos.get(i).setId((long) (i + 1));
-            testPartidos.get(i).setEstado(Estado.EN_CURSO);
+            testPartidos.get(i).setEstado(Estado.NO_INICIADO);
             testPartidos.get(i).setJugadorVisitante(testJugadores.get(0));
             testPartidos.get(i).setJugadorLocal(testJugadores.get(1));
             testPartidos.get(i).setCantidadGamesLocal((int) (Math.random() * 6));
@@ -133,14 +133,63 @@ class PartidoServiceTest {
     @Test
     void testSaveByDateThrowsERROR() {
         // Erroneous date set
-        partidoDTOToSave.setFechaComienzo(new Date(2019, Calendar.FEBRUARY, 3));
+        partidoDTOToSave.setFechaComienzo(new Date(System.currentTimeMillis() - 100 * 1000));
 
-        PartidoDTO savedPartido = partidoService.save(partidoDTOToSave);
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            partidoService.save(partidoDTOToSave);
+        });
 
-//        ArgumentCaptor<Partido> argumentCaptor = ArgumentCaptor.forClass(Partido.class);
-//        verify(partidoRepository, times(1)).save(argumentCaptor.capture());
+        assertTrue(exception.getMessage().contains(INVALID_DATE));
+    }
 
-        assertNull(savedPartido);
+    @Test
+    void testSaveByPlayersThrowsDuplicatedERROR() {
+        // Same player set
+        partidoToSave.setJugadorLocal(testJugadores.get(0));
+        partidoToSave.setJugadorVisitante(testJugadores.get(0));
+        partidoDTOToSave = partidoMapper.toDTO(partidoToSave);
+
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            partidoService.save(partidoDTOToSave);
+        });
+
+        assertTrue(exception.getMessage().contains(PLAYER_DUPLICATED));
+    }
+
+    @Test
+    void testSaveByPlayersThrowsMissingERROR() {
+        // One player left
+        partidoToSave.setJugadorLocal(null);
+        partidoDTOToSave = partidoMapper.toDTO(partidoToSave);
+
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            partidoService.save(partidoDTOToSave);
+        });
+
+        assertTrue(exception.getMessage().contains(PLAYER_MISSING));
+    }
+
+    @Test
+    void testInitGameOK() {
+        when(partidoRepository.findById(1L)).thenReturn(Optional.of(testPartidos.get(0)));
+        partidoService.initGame(1L);
+
+        ArgumentCaptor<Partido> saveArgumentCaptor = ArgumentCaptor.forClass(Partido.class);
+        verify(partidoRepository, times(1)).save(saveArgumentCaptor.capture());
+
+        ArgumentCaptor<Long> findByIdArgumentCaptor = ArgumentCaptor.forClass(Long.class);
+        verify(partidoRepository, times(2)).findById(findByIdArgumentCaptor.capture());
+
+        assertEquals(Estado.EN_CURSO, saveArgumentCaptor.getValue().getEstado());
+    }
+
+    @Test
+    void testInitGameNotFoundERROR() {
+        Exception exception = assertThrows(NoSuchElementException.class, () -> {
+            partidoService.initGame(1L);
+        });
+
+        assertTrue(exception.getMessage().contains(PARTIDO_WITH_ID + 1L + DOES_NOT_EXIST));
     }
 
 }

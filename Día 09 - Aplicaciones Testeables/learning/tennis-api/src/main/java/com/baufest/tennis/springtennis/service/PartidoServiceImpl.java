@@ -26,9 +26,9 @@ public class PartidoServiceImpl implements PartidoService {
     public static final String NOT_IN_PROGRESS = " is not in progress. ";
     private static final String ALREADY_IN_PROGRESS = " is already in progress or is finished. ";
     public static final String SCORE_IMPOSIBLE = "Score imposible";
-    private static final String PLAYER_MISSING = "Se deben agregar ambos jugadores.";
-    private static final String PLAYER_DUPLICATED = "Los jugadores agregados deben ser distintos.";
-    private static final String INVALID_DATE = "La fecha/hora de inicio debe ser mayor o igual a la fecha/hora actual.";
+    public static final String PLAYER_MISSING = "Se deben agregar ambos jugadores.";
+    public static final String PLAYER_DUPLICATED = "Los jugadores agregados deben ser distintos.";
+    public static final String INVALID_DATE = "La fecha/hora de inicio debe ser mayor o igual a la fecha/hora actual.";
 
     private final PartidoRepository partidoRepository;
     private final PartidoMapper partidoMapper;
